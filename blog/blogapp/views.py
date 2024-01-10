@@ -17,23 +17,28 @@ def index(request):
     return render(request,'index.html',context)
 
 
-def about_detail (request , about_id ):
-    infos = Blog.objects.filter( id = about_id)
-    images = About.objects.all()
+def about_detail (request):
+    infos = About.objects.all()
     context = {
         'infos' : infos,
-        'images' : images,
     }
     return render(request,'about_html',context)
 
-
+def all_works (request):
+    work_all = Work.objects.all()
+    context = {
+        'work_all' : work_all,
+    }
+    return render(request , 'all_works.html' , context)
 
 def work_detail (request , work_id):
+    month = Work.objects.filter( id = work_id)
     infos = Work.objects.filter( id = work_id)
     images = Work.objects.all()
     context = {
         'infos' : infos,
         'images' : images,
+        'month' : month,
     }
     return render(request,'work_html',context)
  
