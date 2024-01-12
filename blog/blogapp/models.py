@@ -36,8 +36,8 @@ class Work(models.Model) :
     created_at = models.DateField(auto_now_add = True)
     is_published = models.BooleanField(default = True)
     month = models.ForeignKey(Month,on_delete=models.CASCADE)
-    date_start = models.DateField(auto_now_add = False)
-    date_end = models.DateField(auto_now_add = False)
+    date_start = models.DateField(auto_now_add = False, null=True )
+    date_end = models.DateField(auto_now_add = False, null=True)
 
     def __str__(self):
         return self.title
