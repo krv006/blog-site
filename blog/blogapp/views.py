@@ -18,7 +18,7 @@ def about_detail (request):
     context = {
         'infos' : infos,
     }
-    return render(request,'about_html',context)
+    return render(request,'about.html',context)
 
 def all_blog (request):
     work_all = Work.objects.all()
@@ -36,5 +36,5 @@ def blog_detail (request , blog_id):
         'month' : month,
         # 'infos' : infos,
     }
-    return render(request,'work_html',context)
+    return render(request,'work.html',context)
  
