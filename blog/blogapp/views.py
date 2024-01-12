@@ -1,14 +1,14 @@
 from django.shortcuts import render
 from .models import Blog , Work , About
-# from .models import Work
+# from django .template.loader import render_to_string 
 # Create your views here.
 
 def index(request):
     titles = Blog.objects.all()
-
+    # response = render_to_string ('templates/index.html')
     context = {
         'titles' : titles,
- 
+        # 'response' : response ,
     }
     return render(request,'index.html',context)
 
@@ -29,12 +29,12 @@ def all_blog (request):
 
 def blog_detail (request , blog_id):
     month = Blog.objects.filter( id = blog_id)
-    # infos = Work.objects.filter( id = work_id)
     images = Blog.objects.all()
+    # infos = Work.objects.filter( id = work_id)
     context = {
-        # 'infos' : infos,
         'images' : images,
         'month' : month,
+        # 'infos' : infos,
     }
     return render(request,'work_html',context)
  
