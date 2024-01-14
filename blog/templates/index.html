@@ -1,17 +1,11 @@
 {% load static  %}
 
-<h1> HI my name is Kamron  </h1>
-
-<header>
-
-{% for i in work %}
-<a href="{% url 'work' i.id %}"><h3>{{i.title}}</h3></a>
-{% endfor %}
-
-</header>
-
 <!Doctype html> 
-<html lang="en"> 
+<html lang="en">
+
+
+
+ 
     <head> 
         <meta charset="utf-8"> 
         <meta name="viewport" content="width=device-width, initial-scale=1"> 
@@ -34,11 +28,14 @@
         <link rel="stylesheet" href="{% static 'css/slick.css' %}"/> 
  
         <link href="{% static 'css/tooplate-little-fashion.css' %}" rel="stylesheet"> 
-<!-- 
- 
-Tooplate 2127 Little Fashion 
- 
-https://www.tooplate.com/view/2127-little-fashion 
- 
---> 
+
     </head>
+
+
+<body>
+<header>
+    <h1> HI my name is Kamron  </h1>
+        
+        
+</header>
+</body>

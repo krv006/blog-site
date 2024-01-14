@@ -1,18 +1,23 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WORK</title>
+    <title>Document</title>
 </head>
 
+
 <body>
-<h1>My works and what i'm doing in the mounth you see this page</h1>
     
+    {% for i in blogs %}
+    <a href = {% url 'blog_detail' i.id %}> {{i.title}} </a> 
+    </br>
+    {%endfor%}
+
     
- 
 </body>
+
+
+
 
 </html>
