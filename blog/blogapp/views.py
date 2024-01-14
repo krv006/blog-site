@@ -25,3 +25,11 @@ def blog_detail (request , blog_id):
         'blog' : blog,
     }
     return render(request,'blog.html',context)
+
+
+def work (request):
+    
+    context = {
+    
+    }
+    return render(request,'work.html',context)
