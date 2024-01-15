@@ -9,13 +9,15 @@
 
 <body>
     
-    {% for i in blogs %}
-    <a href = {% url 'blog_detail' i.id %}> {{i.title}} </a> 
-    </br>
+    {% for i in work %}
+    <h1> {{i.title}} </h1>
+    <h1> {{i.info}} </h1>
     {%endfor%}
-
     
+
 </body>
+
+
 
 
 </html>

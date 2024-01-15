@@ -10,8 +10,7 @@
 <body>
     
     {% for i in work %}
-    <h1> {{i.title}} </h1>
-    <h1> {{i.info}} </h1>
+    <a href = {% url 'work_detail' i.id %}> {{i.title}} </a> </br>
     {%endfor%}
     
 
