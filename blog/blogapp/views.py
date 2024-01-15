@@ -27,9 +27,10 @@ def blog_detail (request , blog_id):
     return render(request,'blog.html',context)
 
 
-def work (request):
+def work (request , work_id ):
+    work = Work.objects.filter( id = work_id )
     
     context = {
-    
+        'work' : work
     }
     return render(request,'work.html',context)
